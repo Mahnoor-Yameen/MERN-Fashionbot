@@ -1,7 +1,6 @@
 // IMPORTING EXPRESS
 const express = require("express");
 const app = express();
-const path = require("path");
 //  mahnoor tauseef work
 
 //const bodyParser = require('body-parser');
@@ -19,6 +18,10 @@ const {
 const dialogflow = require('dialogflow');
 require("dotenv").config();
 const port = 1234 
+
+const path = require('path')
+const clientpath = path.join(__dirname,'../frontend/dist')
+app.use('/',express.static(clientpath))
 
 
  const JWT_SECRET='helloworld'
@@ -43,7 +46,9 @@ app.use("/api", require("./API/category/Router")); //for category
 app.use("/api", require("./API/ContactUs/Router")); //for contactus
 // app.use("/api", require("./API/Reviews/Router")); //for contactus
 
-
+app.get('*',(req,res)=>{
+  res.sendFile(path.join(__dirname,'../frontend/dist/index.html'))
+})
 
 //app.use('/api',require('./API/RealTimeChat/Router'))           //Mahnoor Tauseef ne realtime chat k liye banaya
 
