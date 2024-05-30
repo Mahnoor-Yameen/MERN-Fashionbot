@@ -1,0 +1,146 @@
+*{
+    font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+
+}
+
+
+
+
+/* new arrival card  */
+
+#arrival{
+  display: flex;
+	justify-content: center;
+  margin-top: 50px;
+}
+.many-row{
+  display: flex;
+  justify-content: space-between;
+}
+.responsive-card {
+  position: relative;
+  width: 150px;
+  height: 100px;
+  margin-top: 50px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+  padding: 30px 10px;
+  background: #ffd7ba;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.responsive-card:hover {
+  height: 150px;
+}
+
+.responsive-imgbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-80px);
+  z-index: 99;
+}
+
+.SvgShadow {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.responsive-content {
+  padding: 136px 10px;
+  text-align: center;
+  opacity: 0;
+}
+
+.responsive-card:hover > .responsive-content {
+  opacity: 1;
+  transform: translateY(-180px);
+}
+/* Add webkit prefixes for the hover effect */
+.responsive-card:hover > .responsive-content {
+  opacity: 1;
+  transform: translateY(-180px);
+  -webkit-transition: opacity 0.3s, transform 0.3s;
+  -moz-transition: opacity 0.3s, transform 0.3s;
+  -o-transition: opacity 0.3s, transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+
+/* MEDIA QUERY */
+
+@media (min-width: 0px) and (max-width: 480px) {
+  .k-navbar{
+    background-color: #fff8f4;
+   }
+   .k-nav-div{
+    background-color: #fff8f4;
+   }
+
+   .k-nav-form{
+display: none;
+
+   }
+ 
+
+
+}
+
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .k-navbar{
+    background-color: #fff8f4;
+   }
+   .k-nav-div{
+    background-color: #fff8f4;
+    margin-top: 20px;
+margin-bottom: 10px;
+
+   }
+
+ 
+}
+
+
+/* 769px — 1024px: Small screens, laptops. */
+@media (min-width: 769px) and (max-width: 990px) {
+  .k-navbar{
+    background-color: #fff8f4;
+   }
+   .k-nav-div{
+    background-color: #fff8f4;
+
+   }
+ 
+  
+}
+
+/* 1025px — 1200px: Desktops, large screens. */
+
+@media (min-width: 991px) and (max-width: 1200px) {
+ .k-navbar{
+  background-color: #fff8f4;
+ }  
+ 
+ .k-nav-div{
+    background-color: #ffd7ba;
+
+   }
+}
+
+@media (min-width: 1201px) and (max-width: 1600px) {
+  .k-navbar{
+   background-color: #fff8f4;
+  }  
+  
+  .k-nav-div{
+     background-color: #ffd7ba;
+ 
+    }
+
+  
+ }
