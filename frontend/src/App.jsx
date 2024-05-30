@@ -17,8 +17,8 @@ const ComponentByRole = {
   guest: Guest,
 };
 
-export const AppRoute = 'http://localhost:1234/'
-// export const AppRoute = '/'
+// export const AppRoute = 'http://localhost:1234/'
+export const AppRoute = '/'
 
 
 
